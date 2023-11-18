@@ -14,6 +14,12 @@ li, a{
     text-decoration: none;
 }
 
+.nav__header{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+}
+
 .nav__bar{
     display: flex;
     justify-content: space-between;
@@ -48,6 +54,10 @@ li, a{
 .hero{
     display: flex;
     justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
 
 .hero>span{
@@ -60,7 +70,9 @@ li, a{
 /* article bebidas */
 .bebidas{
     display: relative;
-    margin-top: 50px;
+    height: 100vh;
+    margin-bottom: 100px;
+    align-items: center;
 }
 
 p{
@@ -111,7 +123,9 @@ p{
 .aboutus{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 span.title, p.paboutus, span.nuestrosatletas{
@@ -147,10 +161,6 @@ p.paboutus{
     text-align: center;
 }
 
-.videos .column div{
-    margin: 10px;
-}
-
 .videos h2{
     font-family: 'Teko', sans-serif;
     color: #edf0f1;
@@ -168,7 +178,15 @@ p.paboutus{
     font-family: 'Teko', sans-serif;
     font-size: 2rem;
     border-color: #6bd41a;
-    padding: 5px;
+}
+
+.videos button.suscribe{
+    margin-top: 15px;
+}
+
+.videos button a{
+    text-decoration: none;
+    color: #edf0f1;
 }
 
 /* media */
@@ -179,16 +197,23 @@ p.paboutus{
     font-size: 3rem;
 }
 
+
+
 /* contacto */
 
 .contacto{
     text-align: center;
+    display: grid;
+    grid-template: 
+    'contactTitle contactTitle contactTitle contactTitle'
+    'container container column column';
 }
 
 .contacto .column{
-    display: flex;
+    display: grid;
     justify-content: space-evenly;
     align-items: center;
+    grid-area: column;
 }
 
 .contacto span, .contacto p{
@@ -196,14 +221,90 @@ p.paboutus{
     text-align: center;
 }
 
-.contacto span{
+.contactTitle{
     font-family: 'Teko', sans-serif;
     font-size: 4rem;
+    grid-area: contactTitle;
 }
 
 .contacto p{
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
+}
+
+.formTitle{
+    color:#edf0f1;
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+}
+
+.contacto .container{
+    grid-area: container;
+    padding-left: 100px;
+}
+
+form{
+    color: #edf0f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+span .details{
+    font-size: 2rem;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: cal(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input, textarea{
+    height: 45px;
+    width: 100%;
+    color: #edf0f1;
+    outline: none;
+    border-width: 0 0 20px 0;
+    border-style: solid;
+    border-color:  #edf0f1;;
+    padding-left: 15px;
+    font-size: 1rem;
+    border-bottom-width: 2px;
+    transition: all 0.3s esase;
+}
+
+.user-details .input-box input:focus, .user-details .input-box input:valid, textarea:focus{
+    border-color: #6bd41a;
+}
+
+::placeholder{
+    color: #b6b6b6;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    width: fit-content;
+    outline: none;
+    color: #edf0f1;
+    font-size: 1.2rem;
+    font-weight: 500px;
+    padding: 5px;
+    border-color: #6bd41a;
 }
 
 .dirMap p{

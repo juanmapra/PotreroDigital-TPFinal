@@ -15,23 +15,26 @@
 
 <body>
 
-    <header class="nav__bar">
-        <img class="logo" src="assets/monster-logo.webp" alt="Monster Logo">
-        <nav>
-            <ul class="nav__links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#bebidas">Bebidas</a></li>
-                <li><a href="#aboutus">Sobre Nosotros</a></li>
-                <li><a href="#videos">Media</a></li>
-                <li><a href="#contacto">Contactanos</a></li>
-            </ul>
-        </nav>
+    <header class="nav__header">
+        <div class="nav__bar">
+            <img class="logo" src="assets/monster-logo.webp" alt="Monster Logo">
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#aboutus">Sobre Nosotros</a></li>
+                    <li><a href="#videos">Media</a></li>
+                    <li><a href="#contacto">Contactanos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <header class="hero" id="hero">
             <span>
                 PERTENECER SIN FRONTERAS,<br> ALCANZA EL ÉXITO SIN LÍMITES
             </span>
+            <img src="assets/bg2fade.png" alt="">
         </header>
         <article class="bebidas" id="bebidas">
             <p><span class="title1">MONSTER </span><span class="title2">ENERGY DRINKS</span></p>
@@ -154,51 +157,76 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <button>TODOS LOS VIDEOS</button>
+                <button class="suscribe"><a href="https://www.youtube.com/monsterenergy" target="_blank">TODOS LOS
+                        VIDEOS</a></button>
             </div>
         </article>
-        <article class="media">
+        <!-- <article class="media">
             <span>#MONSTERENERGY</span>
 
-        </article>
+        </article> -->
         <article class="contacto" id="contacto">
-            <span>CONTACTAR A MONSTER ENERGY</span>
+            <span class="contactTitle">CONTACTAR A MONSTER ENERGY</span>
+            <div class="container">
+                <div class="formTitle">Contacto</div>
+                <form action="mailto:juanmapra@yahoo.com.ar" method="GET">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nombre y Apellido</span>
+                            <input type="text" placeholder="Nombre y Apellido" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Correo Electrónico</span>
+                            <input type="text" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Teléfono</span>
+                            <input type="text" placeholder="Teléfono" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Mensaje</span>
+                            <textarea name="" id="message" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
             <div class="column">
-
-                <p class="contactInfo">
-                <div class="dirMap">
-                    <a href="http://maps.google.com/?q=(3291%20Energy%20Beverages%20LLC%20Company%202390%20Anselmo%20Drive)"
-                        target="_blank">
+                <div class="contactInfo">
+                    <div class="dirMap">
+                        <a href="http://maps.google.com/?q=(3291%20Energy%20Beverages%20LLC%20Company%202390%20Anselmo%20Drive)"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                            <p>
+                                1 Monster Way Corona
+                                <br>
+                                Corona, CA 92879
+                                <br>
+                                Mon - Fri: 8 AM - 5 PM PST
+                            </p>
+                        </a>
+                    </div>
+                    <div class="phone">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            class="bi bi-telephone" viewBox="0 0 16 16">
                             <path
-                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                         </svg>
                         <p>
-                            1 Monster Way Corona
+                            Phone: 1-866-322-4466
                             <br>
-                            Corona, CA 92879
-                            <br>
-                            Mon - Fri: 8 AM - 5 PM PST
+                            Phone: 1-855-488-1212
                         </p>
-                    </a>
-                </div>
-                <div class="phone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-telephone" viewBox="0 0 16 16">
-                        <path
-                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                    </svg>
-                    <p>
-                        Phone: 1-866-322-4466
-                        <br>
-                        Phone: 1-855-488-1212
-                    </p>
+                    </div>
                 </div>
             </div>
-            </p>
-            <form action="">CONTACTO</form>
         </article>
         <footer>
             <img src="assets/monster-logo.webp" alt="">
